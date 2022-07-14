@@ -89,7 +89,7 @@ export class PokemonListComponent implements OnInit {
       );
     });
     
-    forkJoin([...arr]).subscribe((pokemons) => {
+    forkJoin([...arr]).subscribe((pokemons: PokemonDetail[]) => {
       this.pokemons.push(...pokemons);
       this.offset +=20;
       this.isLoading = false;
